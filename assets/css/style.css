@@ -1,0 +1,172 @@
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #7A847Aff; /* pastel green */
+    --secondary-color: rgb(197, 197, 197); /* beige */
+    --highlight-color: rgb(0, 0, 0); /* pastel dark green */
+    --highlight-color-light: #ffffff; /* white */
+}
+
+/* Global styles */
+
+body {
+  padding-top: 56px; /* pushes the top of the header down under fixed navbar */
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 0; /* CSS rule to override Bootstrap margin-bottom */
+}
+
+section {
+  padding-top: 56px; /* pushes the top of the section down under the fixed navbar when navigated to */
+}
+
+/* Navigation */
+
+#navigation {
+  background-color: var(--highlight-color);
+}
+
+#navigation a {
+    color: var(--highlight-color-light);
+}
+
+#navigation img {
+  height: 30px;
+}
+
+/* Navbar menu button CSS to override Bootstrap and turn to white colour */
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+} /* replaces Bootstrap black icon with white icon */
+
+.navbar-toggler {
+  border: 1px solid white;
+  background-color: var(--highlight-color);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+} /* makes menu button border white */
+
+.navbar-toggler:hover {
+  background-color: var(--primary-color);
+} /* makes the button change colour when hovered over */
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem var(--highlight-color);
+} /* overrides the default black focus glow to essentially make it invisible */
+
+/* Main section background colour */
+body {
+  background-color: var(--secondary-color);
+}
+
+/* Hero section */
+
+.hero {
+  background-image: url('../images/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  color: rgb(0, 0, 0);
+  padding: 0 1rem;
+}
+
+.hero-content {
+  max-width: 600px;
+  font-weight: 500;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+/* Cards */
+main .card {
+  box-shadow: 0 0 10px 5px var(--highlight-color);
+}
+
+main .card-body,
+main .card-footer {
+  background-color: rgb(222, 222, 222);
+}
+
+/* Footer section */
+#footer {
+  color: var(--highlight-color-light);
+  background-color: var(--highlight-color);
+  font-weight: 500;
+}
+
+#footer i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 0 0.3rem;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+#footer i:hover {
+  color: var(--secondary-color);
+}
+
+/* Media queries */
+
+/* Small devices (phones, up to 768px) */
+@media screen and (max-width: 768px) {  
+  
+  /* font size */
+    body {
+        font-size: 0.7rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    /* Make all service cards the same height for consistency */
+    main .card {
+        min-height: 470px;
+    }
+
+    /* font size */
+    body {
+        font-size: 0.8rem;
+    }
+}
+
+/* Large devices (small laptops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+    /* font size */
+    body {
+        font-size: 0.9rem;
+    }
+   /* Make all service cards the same height for consistency */  
+    main .card {
+        min-height: 515px;
+    }
+
+    /* higher pixel hero image on larger screens */
+    .hero {
+      background-image: url('../images/hero-image.webp');
+    }
+}
+
+/* xl devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+    /* font size */
+    body {
+        font-size: 1rem;
+    }    
+}
