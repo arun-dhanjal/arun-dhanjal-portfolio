@@ -16,7 +16,7 @@
 /* Global styles */
 
 body {
-  padding-top: 56px; /* pushes the top of the header down under fixed navbar */
+  padding-top: 66px; /* pushes the top of the header down under fixed navbar */
   font-weight: 500;
 }
 
@@ -25,7 +25,7 @@ p {
 }
 
 section {
-  padding-top: 56px; /* pushes the top of the section down under the fixed navbar when navigated to */
+  padding-top: 66px; /* pushes the top of the section down under the fixed navbar when navigated to */
 }
 
 /* Navigation */
@@ -35,11 +35,18 @@ section {
 }
 
 #navigation a {
-    color: var(--highlight-color-light);
+  color: var(--highlight-color-light);
 }
 
 #navigation img {
   height: 30px;
+}
+
+#navigation,
+#web-projects,
+#art-gallery,
+#about-me {
+  scroll-margin-top: 66px;
 }
 
 /* Navbar menu button CSS to override Bootstrap and turn to white colour */
@@ -72,7 +79,7 @@ body {
 /* Hero section */
 
 .hero {
-  background-image: url('../images/hero-image.jpg');
+  background-color: var(--highlight-color-light);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

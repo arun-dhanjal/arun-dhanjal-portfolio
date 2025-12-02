@@ -26,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto fs-5">
-                    <a class="nav-link me-2" href="#home">Home</a>
+                    <a class="nav-link me-2" href="#navigation">Home</a>
                     <a class="nav-link me-2" href="#web-projects">Web Projects</a>
                     <a class="nav-link me-2" href="#art-gallery">Art Gallery</a>
                     <a class="nav-link me-2" href="#about-me">About Me</a>
@@ -50,7 +50,7 @@
             <div class="row">
 
                 <!-- Web Projects heading -->
-                <div class="col-12 text-center mb-3 ">
+                <div class="col-12 text-center mb-5">
                         <h1>Web Projects</h1>
                         <p>Having recently completed an intesive 16-week Full Stack Software Development bootcamp, I now have a number of projects that demonstrate my capability to create functional and aesthetic websites and web applications, both individually and as part of a team of developers. Examples of my individual and group hackathon projects are shown below.</p>
                 </div>
@@ -60,7 +60,7 @@
                     <div class="card mb-3 mx-3 border-0">
                         <img src="assets/images/the-cube-review.png" class="card-img-top" alt="A screenshot of the website created by Arun Dhanjal named The Cube Review.">
                         <div class="card-body">
-                            <h5 class="card-title">The Cube Review</h5>
+                            <h5 class="card-title fs-3"><strong>The Cube Review</strong></h5>
                             <p>A mini social platform for hobbyists built around the theme of Rubik's cubes and other twisty puzzles. Full stack web application created using the Django framework and submitted as my final project for Code Institute's Full Stack Developer bootcamp.</p><br>
                             <p class="card-text">This application is designed to give a specific group of users (twisty puzzle enthusiasts) a platform on which they can interact as a community in a number of ways. The main use cases would be: a feed section for viewing, submitting, and commenting on posts; a reviews section to read and submit reviews on a number of puzzles; and a leaderboards section to see solve-time rankings and even add your own. The application would be used in a similar way to other social media apps, albeit on a smaller scale and in a much more specific way.</p>
                         </div>
@@ -106,27 +106,7 @@
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
 
-    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
-    <script>
-        document
-            .querySelectorAll(".navbar-collapse .nav-link")
-            .forEach((link) => {
-                link.addEventListener("click", function (e) {
-                    let section = document.querySelector(e.target.getAttribute("href"));
-                    if (section) {
-                        e.preventDefault(); // Prevent default anchor click behavior
-                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
-                        window.scroll({
-                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
-                            behavior: "smooth",
-                        });
-                        document
-                            .querySelector(".navbar-collapse")
-                            .classList.remove("show"); // Collapse navbar
-                    }
-                });
-            });
-    </script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
