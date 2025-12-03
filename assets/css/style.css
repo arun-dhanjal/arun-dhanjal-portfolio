@@ -1,8 +1,8 @@
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* CSS Variables */
@@ -32,21 +32,11 @@ section {
 
 #navigation {
   background-color: var(--highlight-color);
+  min-height: 66px;
 }
 
 #navigation a {
   color: var(--highlight-color-light);
-}
-
-#navigation img {
-  height: 30px;
-}
-
-#navigation,
-#web-projects,
-#art-gallery,
-#about-me {
-  scroll-margin-top: 66px;
 }
 
 /* Navbar menu button CSS to override Bootstrap and turn to white colour */
