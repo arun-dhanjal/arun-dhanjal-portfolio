@@ -8,7 +8,7 @@
 /* CSS Variables */
 :root {
     --primary-color: #7A847Aff; /* pastel green */
-    --secondary-color: rgb(197, 197, 197); /* beige */
+    --secondary-color: rgb(234, 234, 234); /* beige */
     --highlight-color: rgb(0, 0, 0); /* pastel dark green */
     --highlight-color-light: #ffffff; /* white */
 }
@@ -115,7 +115,7 @@ main .card-footer {
 }
 
 #footer i {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 2rem;
   margin: 0 0.3rem;
   -webkit-transition: color 0.3s ease-in-out;
@@ -124,7 +124,7 @@ main .card-footer {
 }
 
 #footer i:hover {
-  color: var(--secondary-color);
+  color: var(--highlight-color-light);
 }
 
 /* Media queries */
